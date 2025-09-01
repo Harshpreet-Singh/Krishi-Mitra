@@ -40,9 +40,9 @@ body {
   color: #3ab840;
   font-size: larger;
 }
-.banner-line {
+/* .banner-line {
   font-size: larger;
-}
+} */
 .explore-btn {
   display: inline-flex; /* flexbox for text + icon */
   align-items: center; /* vertically center */
@@ -188,3 +188,4 @@ body {
     justify-content: center; /* center icon + text */
   }
 }
+
