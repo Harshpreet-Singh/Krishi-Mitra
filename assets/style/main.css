@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -188,3 +189,196 @@ body {
     justify-content: center; /* center icon + text */
   }
 }
+=======
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/new_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  padding: 10em;
+  overflow: hidden;
+}
+
+.logo_l {
+  font-family: fantasy;
+}
+.logo_oo {
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+.nav-clr {
+  color: #3ab840;
+  font-size: larger;
+}
+/* .banner-line {
+  font-size: larger;
+} */
+.explore-btn {
+  display: inline-flex; /* flexbox for text + icon */
+  align-items: center; /* vertically center */
+  gap: 0.5em; /* spacing between text & icon */
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #3ab84045;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.explore-link {
+  text-decoration: none; /* removes underline */
+  color: #ffffff; /* makes text white */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.explore-btn .material-symbols-outlined {
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1.2em; /* adjust size */
+  line-height: 1; /* fix alignment */
+}
+
+.explore-btn:hover > .explore-link {
+  color: white;
+}
+.explore-btn:hover {
+  scale: 1.05;
+  border: 1px solid #3ab840;
+  background-color: #3ab840;
+  color: white;
+}
+.explore-btn:hover > .material-symbols-outlined {
+  scale: 1.09;
+  transform: translateX(7px);
+  transition: transform 0.5s ease;
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5rem;
+  left: 4rem;
+}
+.hero_img {
+  width: 27rem;
+  height: auto;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+}
+.shadow-container {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-img {
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.shadow-container::after {
+  margin-left: 2.7rem;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  filter: blur(6px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* move up */
+  }
+}
+
+/* Shadow follows floating */
+.floating-img {
+  animation: float 3s ease-in-out infinite;
+}
+.shadow-container::after {
+  animation: shadow-scale 3s ease-in-out infinite;
+}
+
+@keyframes shadow-scale {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) scale(0.8); /* shrink when floating higher */
+    opacity: 0.3;
+  }
+}
+
+/* responsiveness */
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* stack items vertically */
+    padding: 4em 2em; /* reduce padding for small screens */
+    align-items: center; /* center items */
+    text-align: center; /* center text for better mobile view */
+  }
+
+  .shadow-container {
+    order: -1; /* show floating image first */
+    margin-bottom: 2rem; /* spacing below image */
+  }
+
+  .right {
+    padding-left: 0; /* remove left padding */
+    align-items: center; /* center align text/buttons */
+  }
+
+  .hero_img {
+    width: 60%; /* scale image nicely */
+    max-width: 20rem; /* prevent oversized img */
+  }
+  .shadow-container::after {
+    margin-left: -65px;
+  }
+
+  .explore-btn {
+    justify-content: center; /* center icon + text */
+  }
+}
+
+>>>>>>> 169cdf0033318ba37326fa754a0a1d4c34896f1a
