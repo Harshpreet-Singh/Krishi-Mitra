@@ -9,9 +9,3 @@
       navToggle.querySelector("span").textContent =
         navLinks.classList.contains("active") ? "close" : "menu";
     });
-
-    searchToggle.addEventListener("click", () => {
-      mobileSearch.classList.toggle("active");
-      searchToggle.querySelector("span").textContent =
-        mobileSearch.classList.contains("active") ? "close" : "search";
-    });

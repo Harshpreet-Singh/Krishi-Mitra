@@ -7,6 +7,41 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* SCROLLBAR STYLED BELOW */
+::-webkit-scrollbar {
+  width: 10px;               /* vertical scrollbar ki */
+  height: 10px;              /*horizontal scrollbar ki */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); /*scrollbar ka background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3ab840, #2a8030);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5); /* inner spacing */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4fd157, #3ab840);
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3ab840 rgba(255, 255, 255, 0.05);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/new_bg.jpg");
@@ -19,7 +54,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: white;
 }
 
@@ -187,4 +222,61 @@ body {
   .explore-btn {
     justify-content: center; /* center icon + text */
   }
+}
+
+
+/* FEATURES SECTION STYLING */
+
+.features {
+  justify-self: center;
+  padding: 2em 2em 3em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  margin-top: 2em;
+  border-radius: 5px;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card span.material-symbols-outlined {
+  font-size: 3rem;
+  color: #3ab840;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.feature-card p {
+  color: #ddd;
+  font-size: 1rem;
 }
